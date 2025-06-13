@@ -1,31 +1,4 @@
 # ROCK-PAPER--SCISSORS
 
-import random
-options = ['rock', 'paper', 'scissors']
-player_score = 0
-computer_score = 0
-
-while True:
-    user_choice = input("Enter rock, paper, or scissors (or 'exit' to quit): ").lower()
-    if user_choice == 'exit':
-        break
-    if user_choice not in options:
-        print("Invalid input, try again.")
-        continue
-
-    computer_choice = random.choice(options)
-    print(f"Computer chose: {computer_choice}")
-
-    if user_choice == computer_choice:
-        print("It's a tie!")
-    elif (user_choice == 'rock' and computer_choice == 'scissors') or \
-         (user_choice == 'scissors' and computer_choice == 'paper') or \
-         (user_choice == 'paper' and computer_choice == 'rock'):
-        print("You win!")
-        player_score += 1
-    else:
-        print("Computer wins!")
-        computer_score += 1
-
-    print(f"Score → You: {player_score} | Computer: {computer_score}\n")
+The Rock-Paper-Scissors Game is a timeless hand game usually played between two people. It is often used as a decision-making tool or simply for fun. In this project, we implement a digital version of the game, where the player competes against the computer. This project serves as a foundational programming exercise to learn decision-making, randomness, input handling, and user interaction.
 
